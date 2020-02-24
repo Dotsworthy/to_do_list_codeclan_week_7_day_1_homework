@@ -1,0 +1,45 @@
+#app {
+  width: 75%;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  margin: 20px 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+li span {
+  padding: 8px;
+}
+
+li.high {
+  border: 2px solid #f2360c;
+  color: #f2360c;
+}
+
+li.low {
+  border: 2px solid #F7B801;
+  color: #F7B801;
+}
+li.medium {
+  border: 2px solid #FE621D;
+  color: #FE621D;
+}
+li.none {
+  border: 2px solid #1F2326;
+  color: #1F2326;
+}
+
+li.complete {
+  border: 2px solid #008148;
+  color: #008148;
+}

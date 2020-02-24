@@ -2,30 +2,33 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>To Do List</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <script src="./js/bundle.js"></script>
+    <title>To Do List</title>
   </head>
   <body>
     <div id="app">
     <ul>
-      <li v-for="(item, index) in items">
+      <li v-for="item in items" v-bind:class="item.priority.toLowerCase()">
       <span> {{item.name}}</span>
+      <span> {{item.priority}}</span>
       </li>
     </ul>
       <form v-on:submit.prevent="saveNewTodo">
         <label for="new-todo">Add a new todo:</label>
         <input id="new-todo" type="text" v-model="newTodo"/>
 
-        <input type="radio" v-model="newPriority" name="none" value="None">
+        <input id="newPriority" type="radio" v-model="newPriority" name="none" value="None">
         <label for="none">None</label>
 
-        <input type="radio" v-model="newPriority" name="low" value="Low">
+        <input id="newPriority" type="radio" v-model="newPriority" name="low" value="Low">
         <label for="low">Low</label>
 
-        <input type="radio" v-model="newPriority" name="medium" value="Medium">
+        <input id="newPriority" type="radio" v-model="newPriority" name="medium" value="Medium">
         <label for="medium">Medium</label>
 
-        <input type="radio" v-model= "newPriority" name="high" value="High">
+        <input id="newPriority" type="radio" v-model= "newPriority" name="high" value="High">
         <label for="high">High</label>
 
         <input type="submit" value ="Save New Todo" />
